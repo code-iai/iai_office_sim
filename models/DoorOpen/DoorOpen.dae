@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.75.0 commit date:2015-07-07, commit time:14:56, hash:c27589e</authoring_tool>
+    </contributor>
+    <created>2015-10-06T11:37:27</created>
+    <modified>2015-10-06T11:37:27</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="Door-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.4651701 0.2875527 0.1249684 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Door-material" name="Door">
+      <instance_effect url="#Door-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="DoorOpen-mesh" name="DoorOpen">
+      <mesh>
+        <source id="DoorOpen-mesh-positions">
+          <float_array id="DoorOpen-mesh-positions-array" count="24">-0.5496618 0.01832157 0 -0.5496618 0.01832157 2 -0.960086 1.145953 2 -0.960086 1.145953 0 -1.060762 1.10931 0 -1.060762 1.10931 2 -0.6503382 -0.01832157 2 -0.6503382 -0.01832157 0</float_array>
+          <technique_common>
+            <accessor source="#DoorOpen-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="DoorOpen-mesh-normals">
+          <float_array id="DoorOpen-mesh-normals-array" count="30">0 0 1 0 0 -1 -0.3420182 0.9396933 0 0.3420199 -0.9396927 0 -0.9396927 -0.34202 0 0.9396926 0.3420202 0 3.70892e-6 0 1 -0.3420189 0.939693 0 -0.9396927 -0.3420202 0 0.9396927 0.3420202 0</float_array>
+          <technique_common>
+            <accessor source="#DoorOpen-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="DoorOpen-mesh-map">
+          <float_array id="DoorOpen-mesh-map-array" count="72">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#DoorOpen-mesh-map-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="DoorOpen-mesh-vertices">
+          <input semantic="POSITION" source="#DoorOpen-mesh-positions"/>
+        </vertices>
+        <polylist material="Door-material" count="12">
+          <input semantic="VERTEX" source="#DoorOpen-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#DoorOpen-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#DoorOpen-mesh-map" offset="2" set="0"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>2 0 0 5 0 1 6 0 2 7 1 3 4 1 4 3 1 5 4 2 6 5 2 7 2 2 8 6 3 9 7 3 10 0 3 11 7 4 12 6 4 13 5 4 14 3 5 15 2 5 16 1 5 17 1 6 18 2 6 19 6 6 20 0 1 21 7 1 22 3 1 23 3 7 24 4 7 25 2 7 26 1 3 27 6 3 28 0 3 29 4 8 30 7 8 31 5 8 32 0 9 33 3 9 34 1 9 35</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="DoorOpen" name="DoorOpen" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#DoorOpen-mesh" name="DoorOpen">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Door-material" target="#Door-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

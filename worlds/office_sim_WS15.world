@@ -1,0 +1,1914 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="office_sim">
+    <scene>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+    </scene>
+    
+    <include>
+      <uri>model://sun</uri>
+    </include>
+        <!--
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    
+    -->
+    <model name='office_floor'>
+      <pose>1 -3 0 0 0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>24 20</size>
+            </plane>
+          </geometry>
+          <material>
+	  <script>
+            <uri>file://Media/materials/scripts/iai-office.material</uri>
+             <name>IAI/OfficeCarpet</name>
+          </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+    </model>
+    <light name='fill_light_2' type='directional'>
+      <pose>10 20 10 -1 -1 0</pose>
+      <diffuse>0.2 0.18 0.18 1</diffuse>
+      <specular>0.0980392 0.0980392 0.0980392 1</specular>
+      <direction>0.1 0.1 -0.9</direction>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>1</cast_shadows>
+    </light>
+    <light name='fill_light_0' type='directional'>
+      <pose>-10 -20 10 1 1 0</pose>
+      <diffuse>0.25 0.2 0.2 1</diffuse>
+      <specular>0.0980392 0.0980392 0.0980392 1</specular>
+      <direction>0.1 0.1 -0.9</direction>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>1</cast_shadows>
+    </light>
+    <include>
+      <name>Shelves.031</name>
+      <uri>model://Shelves</uri>
+      <pose>-3.9684362411499023 -1.1350655555725098 0.0 0.0 0.0 4.1326416067022365e-07</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.030</name>
+      <uri>model://Shelves</uri>
+      <pose>-0.9684362411499023 -7.13506555557251 0.0 0.0 0.0 4.1326416067022365e-07</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.029</name>
+      <uri>model://Shelves</uri>
+      <pose>8.031563758850098 -5.13506555557251 0.0 0.0 0.0 4.1326416067022365e-07</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.028</name>
+      <uri>model://Shelves</uri>
+      <pose>8.031563758850098 6.86493444442749 0.0 0.0 0.0 4.1326416067022365e-07</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.027</name>
+      <uri>model://Shelves</uri>
+      <pose>2.0315637588500977 6.86493444442749 0.0 0.0 0.0 4.1326416067022365e-07</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.026</name>
+      <uri>model://Shelves</uri>
+      <pose>3.0315637588500977 1.1442127227783203 0.0 0.0 -0.0 3.1415929794311523</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.025</name>
+      <uri>model://Shelves</uri>
+      <pose>-7.968436241149902 1.1442127227783203 0.0 0.0 -0.0 3.1415929794311523</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.024</name>
+      <uri>model://Shelves</uri>
+      <pose>-0.9684362411499023 -6.85578727722168 0.0 0.0 -0.0 3.1415929794311523</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.023</name>
+      <uri>model://Shelves</uri>
+      <pose>11.93159294128418 -4.842299938201904 0.0 0.0 -0.0 3.1415929794311523</pose>
+    </include>
+    
+    
+    
+    <include>
+      <name>Shelves.021</name>
+      <uri>model://Shelves</uri>
+      <pose>3.0315637588500977 -6.85578727722168 0.0 0.0 -0.0 3.1415929794311523</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.020</name>
+      <uri>model://Shelves</uri>
+      <pose>3.0315637588500977 -12.85578727722168 0.0 0.0 -0.0 3.1415929794311523</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.019</name>
+      <uri>model://Shelves</uri>
+      <pose>4.831563949584961 -11.677356719970703 0.0 0.0 -0.0 4.71238899230957</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.018</name>
+      <uri>model://Shelves</uri>
+      <pose>-0.16843605041503906 -8.341840744018555 0.0 0.0 -0.0 4.71238899230957</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.017</name>
+      <uri>model://Shelves</uri>
+      <pose>-0.16843605041503906 -11.341840744018555 0.0 0.0 -0.0 4.71238899230957</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.016</name>
+      <uri>model://Shelves</uri>
+      <pose>-6.168436050415039 -3.3418407440185547 0.0 0.0 -0.0 4.71238899230957</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.015</name>
+      <uri>model://Shelves</uri>
+      <pose>6.831563949584961 3.6581592559814453 0.0 0.0 -0.0 4.71238899230957</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.014</name>
+      <uri>model://Shelves</uri>
+      <pose>4.831563949584961 -6.341840744018555 0.0 0.0 -0.0 4.71238899230957</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.013</name>
+      <uri>model://Shelves</uri>
+      <pose>12.831563949584961 -8.341840744018555 0.0 0.0 -0.0 4.71238899230957</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.012</name>
+      <uri>model://Shelves</uri>
+      <pose>12.831563949584961 -2.3418402671813965 0.0 0.0 -0.0 4.71238899230957</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.011</name>
+      <uri>model://Shelves</uri>
+      <pose>12.831563949584961 -3.970358371734619 0.0 0.0 -0.0 4.71238899230957</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.010</name>
+      <uri>model://Shelves</uri>
+      <pose>-5.8966450691223145 -4.741840362548828 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.009</name>
+      <uri>model://Shelves</uri>
+      <pose>7.1033549308776855 -9.70030403137207 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.008</name>
+      <uri>model://Shelves</uri>
+      <pose>-10.896644592285156 -11.741840362548828 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.007</name>
+      <uri>model://Shelves</uri>
+      <pose>0.10335493087768555 -9.741840362548828 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.006</name>
+      <uri>model://Shelves</uri>
+      <pose>0.10335493087768555 -2.741840362548828 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.005</name>
+      <uri>model://Shelves</uri>
+      <pose>0.10335493087768555 2.258159637451172 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.004</name>
+      <uri>model://Shelves</uri>
+      <pose>7.1033549308776855 5.028604507446289 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.003</name>
+      <uri>model://Shelves</uri>
+      <pose>7.1033549308776855 3.964681625366211 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.002</name>
+      <uri>model://Shelves</uri>
+      <pose>7.1033549308776855 0.9646815657615662 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>Shelves.001</name>
+      <uri>model://Shelves</uri>
+      <pose>7.1033549308776855 -0.11143025010824203 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorOpen.011</name>
+      <uri>model://DoorOpen</uri>
+      <pose>-2.0 1.0 0.0 0.0 -0.0 -2.384185791015625e-07</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorOpen.010</name>
+      <uri>model://DoorOpen</uri>
+      <pose>6.0 1.0 0.0 0.0 -0.0 -2.384185791015625e-07</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorOpen.009</name>
+      <uri>model://DoorOpen</uri>
+      <pose>-2.0 -1.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorOpen.008</name>
+      <uri>model://DoorOpen</uri>
+      <pose>-10.0 -7.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorOpen.007</name>
+      <uri>model://DoorOpen</uri>
+      <pose>-8.0 -1.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorOpen.006</name>
+      <uri>model://DoorOpen</uri>
+      <pose>2.0 -1.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorOpen.005</name>
+      <uri>model://DoorOpen</uri>
+      <pose>5.0 -10.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorOpen.004</name>
+      <uri>model://DoorOpen</uri>
+      <pose>5.0 -4.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorOpen.003</name>
+      <uri>model://DoorOpen</uri>
+      <pose>7.0 -4.0 0.0 0.0 -0.0 -1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorOpen.002</name>
+      <uri>model://DoorOpen</uri>
+      <pose>7.0 -8.0 0.0 0.0 -0.0 -1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorOpen.001</name>
+      <uri>model://DoorOpen</uri>
+      <pose>-4.0 -7.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.077</name>
+      <uri>model://Chair</uri>
+      <pose>-1.1767916679382324 6.461211204528809 0.0 0.0 -0.0 1.0580670833587646</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.076</name>
+      <uri>model://Chair</uri>
+      <pose>-9.856108665466309 6.461211204528809 0.0 0.0 -0.0 -0.9490617513656616</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.075</name>
+      <uri>model://Chair</uri>
+      <pose>-10.422019958496094 5.518025875091553 0.0 0.0 -0.0 2.39536190032959</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.074</name>
+      <uri>model://Chair</uri>
+      <pose>-10.422019958496094 1.5180258750915527 0.0 0.0 -0.0 2.39536190032959</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.073</name>
+      <uri>model://Chair</uri>
+      <pose>-8.894061088562012 4.800981521606445 0.0 0.0 -0.0 1.919332504272461</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.072</name>
+      <uri>model://Chair</uri>
+      <pose>-8.120648384094238 4.103024482727051 0.0 0.0 -0.0 2.7526354789733887</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.071</name>
+      <uri>model://Chair</uri>
+      <pose>-7.112948894500732 6.28751277923584 0.0 0.0 -0.0 -0.03989126533269882</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.070</name>
+      <uri>model://Chair</uri>
+      <pose>-6.4488067626953125 5.786490440368652 0.0 0.0 -0.0 -0.8731942176818848</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.069</name>
+      <uri>model://Chair</uri>
+      <pose>-4.859220027923584 1.5611318349838257 0.0 0.0 -0.0 -2.730329990386963</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.068</name>
+      <uri>model://Chair</uri>
+      <pose>-5.957728862762451 1.5050313472747803 0.0 0.0 -0.0 2.923724412918091</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.067</name>
+      <uri>model://Chair</uri>
+      <pose>-5.816341876983643 3.8929905891418457 0.0 0.0 -0.0 0.2612699568271637</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.066</name>
+      <uri>model://Chair</uri>
+      <pose>-6.551100730895996 3.502814769744873 0.0 0.0 -0.0 1.094572901725769</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.065</name>
+      <uri>model://Chair</uri>
+      <pose>-2.828597068786621 4.6129560470581055 0.0 0.0 -0.0 1.443638563156128</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.064</name>
+      <uri>model://Chair</uri>
+      <pose>-1.8943233489990234 5.306358337402344 0.0 0.0 -0.0 -0.1208677738904953</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.063</name>
+      <uri>model://Chair</uri>
+      <pose>-1.3927404880523682 3.009568214416504 0.0 0.0 -0.0 -2.793056011199951</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.062</name>
+      <uri>model://Chair</uri>
+      <pose>-0.5971378087997437 3.550607442855835 0.0 0.0 -0.0 -1.9489178657531738</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.061</name>
+      <uri>model://Chair</uri>
+      <pose>5.789566993713379 6.49669075012207 0.0 0.0 -0.0 1.0295674800872803</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.060</name>
+      <uri>model://Chair</uri>
+      <pose>6.638433933258057 5.663543701171875 0.0 0.0 -0.0 -1.4921659231185913</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.059</name>
+      <uri>model://Chair</uri>
+      <pose>2.205463409423828 3.462778091430664 0.0 0.0 -0.0 3.0117697715759277</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.058</name>
+      <uri>model://Chair</uri>
+      <pose>2.9259519577026367 4.412513256072998 0.0 0.0 -0.0 -1.5958665609359741</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.057</name>
+      <uri>model://Chair</uri>
+      <pose>0.44790756702423096 4.969254493713379 0.0 0.0 -0.0 1.109393835067749</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.056</name>
+      <uri>model://Chair</uri>
+      <pose>-10.168054580688477 -1.8467810153961182 0.0 0.0 -0.0 1.0344487428665161</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.055</name>
+      <uri>model://Chair</uri>
+      <pose>-7.35992431640625 -5.457332611083984 0.0 0.0 -0.0 0.5981165766716003</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.054</name>
+      <uri>model://Chair</uri>
+      <pose>-4.7586989402771 -3.0871129035949707 0.0 0.0 -0.0 -2.2289175987243652</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.053</name>
+      <uri>model://Chair</uri>
+      <pose>-4.7586989402771 -2.030745506286621 0.0 0.0 -0.0 -1.072267770767212</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.051</name>
+      <uri>model://Chair</uri>
+      <pose>-0.552092432975769 -4.030745506286621 0.0 0.0 -0.0 -1.072267770767212</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.050</name>
+      <uri>model://Chair</uri>
+      <pose>-0.6727085113525391 -4.822094917297363 0.0 0.0 -0.0 -1.48405921459198</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.049</name>
+      <uri>model://Chair</uri>
+      <pose>-3.045818328857422 -5.096081733703613 0.0 0.0 -0.0 1.919332504272461</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.048</name>
+      <uri>model://Chair</uri>
+      <pose>1.0853331089019775 -5.794038772583008 0.0 0.0 -0.0 2.7526354789733887</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.047</name>
+      <uri>model://Chair</uri>
+      <pose>7.5999627113342285 -11.34547233581543 0.0 0.0 -0.0 1.206688642501831</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.046</name>
+      <uri>model://Chair</uri>
+      <pose>8.052691459655762 -12.386749267578125 0.0 0.0 0.0 2.24947190284729</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.045</name>
+      <uri>model://Chair</uri>
+      <pose>9.052691459655762 -12.386749267578125 0.0 0.0 0.0 -2.594113349914551</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.044</name>
+      <uri>model://Chair</uri>
+      <pose>4.434733867645264 -2.0032715797424316 0.0 0.0 -0.0 2.7526354789733887</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.043</name>
+      <uri>model://Chair</uri>
+      <pose>-2.5930893421173096 -5.794038772583008 0.0 0.0 -0.0 2.7526354789733887</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.042</name>
+      <uri>model://Chair</uri>
+      <pose>4.560027599334717 -7.4520039558410645 0.0 0.0 -0.0 -0.563490092754364</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.041</name>
+      <uri>model://Chair</uri>
+      <pose>0.4854675233364105 -7.587822914123535 0.0 0.0 -0.0 0.2043076455593109</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.040</name>
+      <uri>model://Chair</uri>
+      <pose>0.7571048736572266 -11.866110801696777 0.0 0.0 0.0 2.2928085327148438</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.039</name>
+      <uri>model://Chair</uri>
+      <pose>12.052691459655762 -12.386749267578125 0.0 0.0 0.0 -2.594113349914551</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.038</name>
+      <uri>model://Chair</uri>
+      <pose>11.992774963378906 -6.101810455322266 0.0 0.0 0.0 -0.6981316208839417</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.037</name>
+      <uri>model://Chair</uri>
+      <pose>9.992774963378906 -4.101810455322266 0.0 0.0 0.0 -2.594113349914551</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.036</name>
+      <uri>model://Chair</uri>
+      <pose>8.061246871948242 -1.1018102169036865 0.0 0.0 0.0 1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.035</name>
+      <uri>model://Chair</uri>
+      <pose>8.061246871948242 -1.9018104076385498 0.0 0.0 0.0 1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.034</name>
+      <uri>model://Chair</uri>
+      <pose>11.761246681213379 -1.1018099784851074 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.033</name>
+      <uri>model://Chair</uri>
+      <pose>11.761246681213379 -1.9018101692199707 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.032</name>
+      <uri>model://Chair</uri>
+      <pose>11.761246681213379 -0.20181012153625488 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.031</name>
+      <uri>model://Chair</uri>
+      <pose>11.761246681213379 0.5981900691986084 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.030</name>
+      <uri>model://Chair</uri>
+      <pose>11.761246681213379 2.3981902599334717 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.029</name>
+      <uri>model://Chair</uri>
+      <pose>11.761246681213379 1.5981900691986084 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.028</name>
+      <uri>model://Chair</uri>
+      <pose>11.761246681213379 3.3981902599334717 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.027</name>
+      <uri>model://Chair</uri>
+      <pose>11.761246681213379 4.198190689086914 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.026</name>
+      <uri>model://Chair</uri>
+      <pose>8.061246871948242 -0.20181035995483398 0.0 0.0 0.0 1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.025</name>
+      <uri>model://Chair</uri>
+      <pose>8.061246871948242 0.5981898307800293 0.0 0.0 0.0 1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.024</name>
+      <uri>model://Chair</uri>
+      <pose>8.061246871948242 2.3981902599334717 0.0 0.0 0.0 1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.023</name>
+      <uri>model://Chair</uri>
+      <pose>8.061246871948242 1.5981900691986084 0.0 0.0 0.0 1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.022</name>
+      <uri>model://Chair</uri>
+      <pose>8.061246871948242 3.3981902599334717 0.0 0.0 0.0 1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.021</name>
+      <uri>model://Chair</uri>
+      <pose>8.061246871948242 4.198190689086914 0.0 0.0 0.0 1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.020</name>
+      <uri>model://Chair</uri>
+      <pose>11.161247253417969 5.5981903076171875 0.0 0.0 -0.0 -1.7484555314695172e-07</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.019</name>
+      <uri>model://Chair</uri>
+      <pose>10.361247062683105 5.5981903076171875 0.0 0.0 -0.0 -1.7484555314695172e-07</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.018</name>
+      <uri>model://Chair</uri>
+      <pose>8.561246871948242 5.5981903076171875 0.0 0.0 -0.0 -1.7484555314695172e-07</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.017</name>
+      <uri>model://Chair</uri>
+      <pose>9.361247062683105 5.5981903076171875 0.0 0.0 -0.0 -1.7484555314695172e-07</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.016</name>
+      <uri>model://Chair</uri>
+      <pose>-8.724837303161621 -10.608839988708496 0.0 0.0 0.0 1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.015</name>
+      <uri>model://Chair</uri>
+      <pose>-8.724837303161621 -11.40884017944336 0.0 0.0 0.0 1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.014</name>
+      <uri>model://Chair</uri>
+      <pose>-8.724837303161621 -9.608839988708496 0.0 0.0 0.0 1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.013</name>
+      <uri>model://Chair</uri>
+      <pose>-8.724837303161621 -8.808839797973633 0.0 0.0 0.0 1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.012</name>
+      <uri>model://Chair</uri>
+      <pose>-7.324837684631348 -11.90884017944336 0.0 0.0 -0.0 -3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.011</name>
+      <uri>model://Chair</uri>
+      <pose>-6.524837493896484 -11.90884017944336 0.0 0.0 -0.0 -3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.010</name>
+      <uri>model://Chair</uri>
+      <pose>-4.724837303161621 -11.90884017944336 0.0 0.0 -0.0 -3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.009</name>
+      <uri>model://Chair</uri>
+      <pose>-5.524837493896484 -11.90884017944336 0.0 0.0 -0.0 -3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.008</name>
+      <uri>model://Chair</uri>
+      <pose>-3.724837303161621 -11.90884017944336 0.0 0.0 -0.0 -3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.007</name>
+      <uri>model://Chair</uri>
+      <pose>-2.924837112426758 -11.90884017944336 0.0 0.0 -0.0 -3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.006</name>
+      <uri>model://Chair</uri>
+      <pose>-7.324837684631348 -8.208840370178223 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.005</name>
+      <uri>model://Chair</uri>
+      <pose>-6.524837493896484 -8.208840370178223 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.004</name>
+      <uri>model://Chair</uri>
+      <pose>-4.724837303161621 -8.208840370178223 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.003</name>
+      <uri>model://Chair</uri>
+      <pose>-5.524837493896484 -8.208840370178223 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.002</name>
+      <uri>model://Chair</uri>
+      <pose>-3.724837303161621 -8.208840370178223 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>chair.001</name>
+      <uri>model://Chair</uri>
+      <pose>-2.924837350845337 -8.208840370178223 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>SmallTable.009</name>
+      <uri>model://SmallTable</uri>
+      <pose>11.49277114868164 -11.799837112426758 0.0 0.0 -0.0 0.6710938811302185</pose>
+    </include>
+    
+    
+    <include>
+      <name>SmallTable.008</name>
+      <uri>model://SmallTable</uri>
+      <pose>0.49277162551879883 -7.997496604919434 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>SmallTable.007</name>
+      <uri>model://SmallTable</uri>
+      <pose>4.492771625518799 -7.997496604919434 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>SmallTable.005</name>
+      <uri>model://SmallTable</uri>
+      <pose>-9.351788520812988 -2.1724982261657715 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>SmallTable.004</name>
+      <uri>model://SmallTable</uri>
+      <pose>-10.550202369689941 6.496032238006592 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>SmallTable.003</name>
+      <uri>model://SmallTable</uri>
+      <pose>-0.5502023696899414 6.496032238006592 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.035</name>
+      <uri>model://BigTable</uri>
+      <pose>9.970643997192383 -3.337587833404541 0.0 0.0 -0.0 -3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.034</name>
+      <uri>model://BigTable</uri>
+      <pose>-1.7653074264526367 -10.015997886657715 0.0 0.0 0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>SmallTable.002</name>
+      <uri>model://SmallTable</uri>
+      <pose>6.449797630310059 6.496032238006592 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>SmallTable.001</name>
+      <uri>model://SmallTable</uri>
+      <pose>4.484805583953857 -1.5257582664489746 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.033</name>
+      <uri>model://BigTable</uri>
+      <pose>1.3909807205200195 -11.392568588256836 0.0 0.0 -0.0 -0.9696148037910461</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.032</name>
+      <uri>model://BigTable</uri>
+      <pose>11.59203815460205 -6.392568588256836 0.0 0.0 0.0 2.259244441986084</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.031</name>
+      <uri>model://BigTable</uri>
+      <pose>1.5920383930206299 4.607431411743164 0.0 0.0 -0.0 -2.278611898422241</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.030</name>
+      <uri>model://BigTable</uri>
+      <pose>-5.888200283050537 3.0161097049713135 0.0 0.0 -0.0 0.28127923607826233</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.029</name>
+      <uri>model://BigTable</uri>
+      <pose>-5.666131496429443 2.247548818588257 0.0 0.0 -0.0 0.28127923607826233</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.028</name>
+      <uri>model://BigTable</uri>
+      <pose>-8.040440559387207 4.811714172363281 0.0 0.0 0.0 -0.7120052576065063</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.027</name>
+      <uri>model://BigTable</uri>
+      <pose>-7.517758369445801 5.417357444763184 0.0 0.0 0.0 -0.7120052576065063</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.026</name>
+      <uri>model://BigTable</uri>
+      <pose>-1.4606881141662598 3.8930177688598633 0.0 0.0 -0.0 -2.475163459777832</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.025</name>
+      <uri>model://BigTable</uri>
+      <pose>-1.9552350044250488 4.521844863891602 0.0 0.0 -0.0 -2.475163459777832</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.024</name>
+      <uri>model://BigTable</uri>
+      <pose>-9.847131729125977 2.143615245819092 0.0 0.0 -0.0 -0.5935592651367188</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.023</name>
+      <uri>model://BigTable</uri>
+      <pose>-6.975014686584473 -5.92275333404541 0.0 0.0 -0.0 0.9772372841835022</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.022</name>
+      <uri>model://BigTable</uri>
+      <pose>-5.118752956390381 -8.626441955566406 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.021</name>
+      <uri>model://BigTable</uri>
+      <pose>-3.282266616821289 -8.626441955566406 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.020</name>
+      <uri>model://BigTable</uri>
+      <pose>-6.928031921386719 -8.626441955566406 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.019</name>
+      <uri>model://BigTable</uri>
+      <pose>-5.103433609008789 -11.471855163574219 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.018</name>
+      <uri>model://BigTable</uri>
+      <pose>-6.928031921386719 -11.471855163574219 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.017</name>
+      <uri>model://BigTable</uri>
+      <pose>-3.282266616821289 -11.471855163574219 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.016</name>
+      <uri>model://BigTable</uri>
+      <pose>-8.26133918762207 -10.950126647949219 0.0 0.0 0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.015</name>
+      <uri>model://BigTable</uri>
+      <pose>-8.26133918762207 -9.114413261413574 0.0 0.0 0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.014</name>
+      <uri>model://BigTable</uri>
+      <pose>10.849480628967285 5.211101531982422 0.0 0.0 -0.0 -3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.013</name>
+      <uri>model://BigTable</uri>
+      <pose>9.01376724243164 5.211101531982422 0.0 0.0 -0.0 -3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.012</name>
+      <uri>model://BigTable</uri>
+      <pose>8.49203872680664 -1.5925686359405518 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.011</name>
+      <uri>model://BigTable</uri>
+      <pose>8.49203872680664 0.2320290505886078 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.010</name>
+      <uri>model://BigTable</uri>
+      <pose>8.49203872680664 3.877794027328491 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.009</name>
+      <uri>model://BigTable</uri>
+      <pose>8.49203872680664 2.053196430206299 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.008</name>
+      <uri>model://BigTable</uri>
+      <pose>11.337451934814453 2.053196430206299 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.007</name>
+      <uri>model://BigTable</uri>
+      <pose>11.337451934814453 3.877794027328491 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.006</name>
+      <uri>model://BigTable</uri>
+      <pose>11.337451934814453 0.2320290505886078 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.005</name>
+      <uri>model://BigTable</uri>
+      <pose>11.337451934814453 -1.5925686359405518 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.004</name>
+      <uri>model://BigTable</uri>
+      <pose>-5.507961273193359 -2.5925686359405518 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.003</name>
+      <uri>model://BigTable</uri>
+      <pose>-2.0734405517578125 -4.955126762390137 0.0 0.0 -0.0 -1.1522915363311768</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.002</name>
+      <uri>model://BigTable</uri>
+      <pose>-1.3424824476242065 -4.630010604858398 0.0 0.0 -0.0 -1.1522915363311768</pose>
+    </include>
+    
+    
+    <include>
+      <name>BigTable.001</name>
+      <uri>model://BigTable</uri>
+      <pose>1.5920383930206299 -5.392568588256836 0.0 0.0 -0.0 -0.8726645708084106</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.019</name>
+      <uri>model://WindowTile</uri>
+      <pose>-6.0 -13.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.018</name>
+      <uri>model://WindowTile</uri>
+      <pose>-2.0 -13.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.017</name>
+      <uri>model://WindowTile</uri>
+      <pose>2.0 -13.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.016</name>
+      <uri>model://WindowTile</uri>
+      <pose>6.0 -13.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.015</name>
+      <uri>model://WindowTile</uri>
+      <pose>-11.0 -10.0 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.014</name>
+      <uri>model://WindowTile</uri>
+      <pose>-11.0 -6.0 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.013</name>
+      <uri>model://WindowTile</uri>
+      <pose>-11.0 -2.0 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.012</name>
+      <uri>model://WindowTile</uri>
+      <pose>-11.0 0.0 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.003</name>
+      <uri>model://WindowTile</uri>
+      <pose>-11.0 4.0 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.084</name>
+      <uri>model://WallTile</uri>
+      <pose>2.0 1.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorTile.011</name>
+      <uri>model://DoorTile</uri>
+      <pose>5.0 -4.0 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorTile.010</name>
+      <uri>model://DoorTile</uri>
+      <pose>5.0 -10.0 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.082</name>
+      <uri>model://WallTile</uri>
+      <pose>4.0 -7.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.081</name>
+      <uri>model://WallTile</uri>
+      <pose>2.0 -7.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.080</name>
+      <uri>model://WallTile</uri>
+      <pose>5.0 -6.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.078</name>
+      <uri>model://WallTile</uri>
+      <pose>5.0 -2.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.077</name>
+      <uri>model://WallTile</uri>
+      <pose>5.0 -8.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.075</name>
+      <uri>model://WallTile</uri>
+      <pose>5.0 -12.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.074</name>
+      <uri>model://WallTile</uri>
+      <pose>0.0 -12.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.073</name>
+      <uri>model://WallTile</uri>
+      <pose>0.0 -10.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.072</name>
+      <uri>model://WallTile</uri>
+      <pose>0.0 -8.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.071</name>
+      <uri>model://WallTile</uri>
+      <pose>-2.0 -7.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.070</name>
+      <uri>model://WallTile</uri>
+      <pose>-6.0 -7.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.069</name>
+      <uri>model://WallTile</uri>
+      <pose>-8.0 -7.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.068</name>
+      <uri>model://WallTile</uri>
+      <pose>0.0 -7.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorTile.009</name>
+      <uri>model://DoorTile</uri>
+      <pose>-4.0 -7.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorTile.008</name>
+      <uri>model://DoorTile</uri>
+      <pose>-10.0 -7.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.067</name>
+      <uri>model://WallTile</uri>
+      <pose>0.0 -2.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.066</name>
+      <uri>model://WallTile</uri>
+      <pose>0.0 -4.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.065</name>
+      <uri>model://WallTile</uri>
+      <pose>0.0 -6.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.064</name>
+      <uri>model://WallTile</uri>
+      <pose>-6.0 -6.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.063</name>
+      <uri>model://WallTile</uri>
+      <pose>-6.0 -4.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.021</name>
+      <uri>model://WallTile</uri>
+      <pose>-6.0 -2.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorTile.007</name>
+      <uri>model://DoorTile</uri>
+      <pose>-8.0 -1.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorTile.006</name>
+      <uri>model://DoorTile</uri>
+      <pose>-2.0 -1.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.062</name>
+      <uri>model://WallTile</uri>
+      <pose>0.0 -1.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.061</name>
+      <uri>model://WallTile</uri>
+      <pose>4.0 -1.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorTile.005</name>
+      <uri>model://DoorTile</uri>
+      <pose>2.0 -1.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.036</name>
+      <uri>model://WallTile</uri>
+      <pose>-10.0 -1.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.031</name>
+      <uri>model://WallTile</uri>
+      <pose>-6.0 -1.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.028</name>
+      <uri>model://WallTile</uri>
+      <pose>-4.0 -1.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorTile.004</name>
+      <uri>model://DoorTile</uri>
+      <pose>7.0 -8.0 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.010</name>
+      <uri>model://WindowTile</uri>
+      <pose>10.0 -13.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.009</name>
+      <uri>model://WindowTile</uri>
+      <pose>13.0 -10.0 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.060</name>
+      <uri>model://WallTile</uri>
+      <pose>-8.0 1.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.059</name>
+      <uri>model://WallTile</uri>
+      <pose>-4.0 1.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.058</name>
+      <uri>model://WallTile</uri>
+      <pose>-6.0 1.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.057</name>
+      <uri>model://WallTile</uri>
+      <pose>-10.0 1.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.056</name>
+      <uri>model://WallTile</uri>
+      <pose>-10.0 7.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.008</name>
+      <uri>model://WindowTile</uri>
+      <pose>-8.0 7.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.055</name>
+      <uri>model://WallTile</uri>
+      <pose>-11.0 6.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.054</name>
+      <uri>model://WallTile</uri>
+      <pose>-11.0 2.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.051</name>
+      <uri>model://WallTile</uri>
+      <pose>-11.0 -4.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.047</name>
+      <uri>model://WallTile</uri>
+      <pose>-11.0 -8.0 0.0 0.0 -0.0 -1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.046</name>
+      <uri>model://WallTile</uri>
+      <pose>-11.0 -12.0 0.0 0.0 -0.0 -1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.044</name>
+      <uri>model://WallTile</uri>
+      <pose>0.0 -13.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.043</name>
+      <uri>model://WallTile</uri>
+      <pose>-4.0 -13.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.042</name>
+      <uri>model://WallTile</uri>
+      <pose>-10.0 -13.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.040</name>
+      <uri>model://WallTile</uri>
+      <pose>-8.0 -13.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.039</name>
+      <uri>model://WallTile</uri>
+      <pose>4.0 -13.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.037</name>
+      <uri>model://WallTile</uri>
+      <pose>7.0 -12.0 0.0 0.0 -0.0 -1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.035</name>
+      <uri>model://WallTile</uri>
+      <pose>7.0 -6.0 0.0 0.0 -0.0 -1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.034</name>
+      <uri>model://WallTile</uri>
+      <pose>7.0 -10.0 0.0 0.0 -0.0 -1.5707963705062866</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.033</name>
+      <uri>model://WallTile</uri>
+      <pose>8.0 -13.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.032</name>
+      <uri>model://WallTile</uri>
+      <pose>12.0 -13.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.030</name>
+      <uri>model://WallTile</uri>
+      <pose>13.0 -12.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.027</name>
+      <uri>model://WallTile</uri>
+      <pose>13.0 -4.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.026</name>
+      <uri>model://WallTile</uri>
+      <pose>13.0 -8.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.025</name>
+      <uri>model://WallTile</uri>
+      <pose>13.0 -6.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.024</name>
+      <uri>model://WallTile</uri>
+      <pose>10.0 -5.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.023</name>
+      <uri>model://WallTile</uri>
+      <pose>12.0 -5.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.022</name>
+      <uri>model://WallTile</uri>
+      <pose>8.0 -5.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.020</name>
+      <uri>model://WallTile</uri>
+      <pose>7.0 0.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.019</name>
+      <uri>model://WallTile</uri>
+      <pose>7.0 -2.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.018</name>
+      <uri>model://WallTile</uri>
+      <pose>13.0 -2.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.007</name>
+      <uri>model://WindowTile</uri>
+      <pose>13.0 0.0 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.006</name>
+      <uri>model://WindowTile</uri>
+      <pose>13.0 4.0 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.017</name>
+      <uri>model://WallTile</uri>
+      <pose>13.0 6.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.016</name>
+      <uri>model://WallTile</uri>
+      <pose>13.0 2.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.015</name>
+      <uri>model://WallTile</uri>
+      <pose>12.0 7.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.014</name>
+      <uri>model://WallTile</uri>
+      <pose>8.0 7.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.005</name>
+      <uri>model://WindowTile</uri>
+      <pose>10.0 7.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.013</name>
+      <uri>model://WallTile</uri>
+      <pose>7.0 4.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.012</name>
+      <uri>model://WallTile</uri>
+      <pose>-2.0 7.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.011</name>
+      <uri>model://WallTile</uri>
+      <pose>7.0 2.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.010</name>
+      <uri>model://WallTile</uri>
+      <pose>7.0 6.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.004</name>
+      <uri>model://WindowTile</uri>
+      <pose>4.0 7.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.009</name>
+      <uri>model://WallTile</uri>
+      <pose>2.0 7.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.008</name>
+      <uri>model://WallTile</uri>
+      <pose>6.0 7.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorTile.003</name>
+      <uri>model://DoorTile</uri>
+      <pose>7.0 -4.0 0.0 0.0 -0.0 -1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorTile.002</name>
+      <uri>model://DoorTile</uri>
+      <pose>-2.0 1.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.006</name>
+      <uri>model://WallTile</uri>
+      <pose>4.0 1.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.007</name>
+      <uri>model://WallTile</uri>
+      <pose>0.0 7.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.005</name>
+      <uri>model://WallTile</uri>
+      <pose>-6.0 7.0 0.0 0.0 -0.0 3.141592502593994</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.004</name>
+      <uri>model://WallTile</uri>
+      <pose>0.0 6.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.003</name>
+      <uri>model://WallTile</uri>
+      <pose>0.0 4.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.002</name>
+      <uri>model://WallTile</uri>
+      <pose>0.0 2.0 0.0 0.0 -0.0 1.570796251296997</pose>
+    </include>
+    
+    
+    <include>
+      <name>DoorTile.001</name>
+      <uri>model://DoorTile</uri>
+      <pose>6.0 1.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>WindowTile.002</name>
+      <uri>model://WindowTile</uri>
+      <pose>-4.0 7.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+    
+    <include>
+      <name>WallTile.001</name>
+      <uri>model://WallTile</uri>
+      <pose>0.0 1.0 0.0 0.0 -0.0 0.0</pose>
+    </include>
+    
+        
+  </world>
+</sdf>

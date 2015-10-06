@@ -1,0 +1,101 @@
+
+
+material IAI/Trunk
+{
+  technique
+  {
+    pass
+    {
+      scene_blend colour_blend
+      depth_write off
+
+      texture_unit
+      {
+	scale 0.2 0.2
+	tex_coord_set 0
+	texture bark_diffuse.png
+      }
+    }
+  }
+}
+
+
+material IAI/Rock
+{
+  technique
+  {
+    pass
+    {
+      scene_blend colour_blend
+      depth_write off
+
+      texture_unit
+      {
+	scale 1.0 1.0
+	tex_coord_set 0
+	texture bark_diffuse.png
+      }
+    }
+  }
+}
+
+material IAI/TreeLeaves
+{
+    receive_shadows on 
+
+    technique
+    {
+        pass Material
+        {
+            ambient 0.800000011920929 0.800000011920929 0.800000011920929 0.0
+            diffuse 0.800000011920929 0.800000011920929 0.800000011920929 0.01
+            specular 0.0 0.0 0.0 0.0 25.0
+            emissive 0.0 0.0 0.0 0.0
+	    
+	    alpha_rejection greater 128
+            cull_hardware none
+            depth_write off
+            scene_blend alpha_blend
+            
+            texture_unit 
+            {
+                texture TreeBranches_1.png
+                tex_address_mode wrap
+                scale 1.0 1.0
+                tex_coord_set 0
+                colour_op alpha_blend
+            }
+        }
+    }
+}
+
+
+material IAI/ConiferBranches
+{
+    receive_shadows on 
+
+    technique
+    {
+        pass Material
+        {
+            ambient 0.800000011920929 0.800000011920929 0.800000011920929 0.0
+            diffuse 0.800000011920929 0.800000011920929 0.800000011920929 0.01
+            specular 0.0 0.0 0.0 0.0 25.0
+            emissive 0.0 0.0 0.0 0.0
+	    
+	    alpha_rejection greater 128
+            cull_hardware none
+            depth_write off
+            scene_blend alpha_blend
+            
+            texture_unit 
+            {
+                texture Evergreen_Branch_1.png
+                tex_address_mode wrap
+                scale 1.0 1.0
+                tex_coord_set 0
+                colour_op alpha_blend
+            }
+        }
+    }
+}

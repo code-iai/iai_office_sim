@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.5">
+  <model name="WallTile">
+    <static>true</static>
+    <link name="WallTile">
+      <collision name="collision">
+	<geometry>
+            <mesh>
+	      <uri>model://WallTile/WallTile.dae</uri>
+	    </mesh>
+          </geometry>
+      </collision>
+      <visual name="vis">
+        <cast_shadows>false</cast_shadows>	
+	<geometry>
+            <mesh>
+	      <uri>model://WallTile/WallTile.dae</uri>
+	    </mesh>
+          </geometry>
+          <material>
+	  <script>
+            <uri>file://Media/materials/scripts/iai-office.material</uri>
+             <name>IAI/OfficeWall</name>
+          </script>
+        </material>
+      </visual>        
+    </link>    
+  </model>
+</sdf>

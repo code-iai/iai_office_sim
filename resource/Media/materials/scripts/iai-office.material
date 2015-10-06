@@ -1,0 +1,59 @@
+
+
+material IAI/OfficeWall
+{
+  technique
+  {
+    pass
+    {
+      scene_blend colour_blend
+      depth_write off
+
+      texture_unit
+      {
+	scale 1 1
+	tex_coord_set 0
+	texture wall_office.png
+      }
+    }
+  }
+}
+
+material IAI/OfficeCarpet
+{
+  technique
+  {
+    pass
+    {
+      scene_blend colour_blend
+      depth_write off
+
+      texture_unit
+      {
+	scale 0.05 0.05
+	tex_coord_set 0
+	texture ground_office.png
+      }
+    }
+  }
+}
+
+
+material IAI/KitchenFloor
+{
+  technique
+  {
+    pass
+    {
+      scene_blend colour_blend
+      depth_write off
+
+      texture_unit
+      {
+	scale 0.05 0.05
+	tex_coord_set 0
+	texture kitchen_ground.png
+      }
+    }
+  }
+}

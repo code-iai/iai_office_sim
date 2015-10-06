@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<launch>
+  <!--
+  
+  -->
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find iai_office_sim)/worlds/office_sim_WS15.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+  
+  <node pkg="tf" type="static_transform_publisher" name="map_broadcaster" args="0 0 0 0 0 0 1 map world 100" />
+  
+  <node pkg="tf" type="static_transform_publisher" name="nav_broadcaster" args="0 0 0 0 0 0 1 nav map 100" />
+  
+  
+</launch>

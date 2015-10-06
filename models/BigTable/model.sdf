@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.5">
+  <model name="BigTable">
+    <static>true</static>
+    <link name="BigTable">
+      <collision name="collision">
+	<geometry>
+            <mesh>
+	      <uri>model://BigTable/BigTable.dae</uri>
+	    </mesh>
+          </geometry>
+      </collision>
+      <visual name="vis">
+        <cast_shadows>false</cast_shadows>	
+	<geometry>
+            <mesh>
+	      <uri>model://BigTable/BigTable.dae</uri>
+	    </mesh>
+          </geometry>
+      </visual>        
+    </link>    
+  </model>
+</sdf>

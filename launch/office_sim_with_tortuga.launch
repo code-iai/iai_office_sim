@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  
+  <include file="$(find iai_office_sim)/launch/office_sim.launch"/>
+  <include file="$(find tortuga_description)/launch/launch_gazebo.launch"/>
+  
+</launch>

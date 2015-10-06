@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.5">
+  <model name="DoorTile">
+    <static>true</static>
+    <link name="DoorTile">
+      <collision name="collision">
+	<geometry>
+            <mesh>
+	      <uri>model://DoorTile/DoorTile.dae</uri>
+	    </mesh>
+          </geometry>
+      </collision>
+      <visual name="vis">
+        <cast_shadows>false</cast_shadows>	
+	<geometry>
+            <mesh>
+	      <uri>model://DoorTile/DoorTile.dae</uri>
+	    </mesh>
+          </geometry>
+          <material>
+	  <script>
+            <uri>file://Media/materials/scripts/iai-office.material</uri>
+             <name>IAI/OfficeWall</name>
+          </script>
+        </material>
+      </visual>        
+    </link>    
+  </model>
+</sdf>
